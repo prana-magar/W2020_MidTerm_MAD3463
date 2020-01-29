@@ -27,27 +27,27 @@ public class C0773839Main {
             System.out.println("Output : " + rev);
         }
         
-        System.out.println("\n--- Init");
-        String init = LambtonStringTools.initials("pritesh kumar pAtEl");
-        System.out.println("Input  : pritesh kumar pAtEl");
-        System.out.println("Output : " + init);
-        
-        System.out.println("\n--- Binary to Decimal");
-        int decimal = LambtonStringTools.binaryToDecimal("101010");
-        System.out.println("Input  : 101010");
-        System.out.println("Output : " + decimal);
-        
-        System.out.println("\n--- Most Frequent");
-        String mostFrequent = LambtonStringTools.mostFrequent("pritesh kumar pAtEl");
-        System.out.println("Input  : pritesh kumar pAtEl");
-        System.out.println("Output : " + mostFrequent);
-        mostFrequent = LambtonStringTools.mostFrequent("aassrrttggg desf tersgdv");
-        System.out.println("Input  : aassrrttggg desf tersgdv");
-        System.out.println("Output : " + mostFrequent);
-        
-        System.out.println("\n--- Replace SubString");
-        String newString = LambtonStringTools.replaceSubString("Lambton College in Toronto", "College", "University");
-        System.out.println("Input  : Lambton College in Toronto");
-        System.out.println("Output : " + newString);
+//        System.out.println("\n--- Init");
+//        String init = LambtonStringTools.initials("pritesh kumar pAtEl");
+//        System.out.println("Input  : pritesh kumar pAtEl");
+//        System.out.println("Output : " + init);
+//
+//        System.out.println("\n--- Binary to Decimal");
+//        int decimal = LambtonStringTools.binaryToDecimal("101010");
+//        System.out.println("Input  : 101010");
+//        System.out.println("Output : " + decimal);
+//
+//        System.out.println("\n--- Most Frequent");
+//        String mostFrequent = LambtonStringTools.mostFrequent("pritesh kumar pAtEl");
+//        System.out.println("Input  : pritesh kumar pAtEl");
+//        System.out.println("Output : " + mostFrequent);
+//        mostFrequent = LambtonStringTools.mostFrequent("aassrrttggg desf tersgdv");
+//        System.out.println("Input  : aassrrttggg desf tersgdv");
+//        System.out.println("Output : " + mostFrequent);
+//
+//        System.out.println("\n--- Replace SubString");
+//        String newString = LambtonStringTools.replaceSubString("Lambton College in Toronto", "College", "University");
+//        System.out.println("Input  : Lambton College in Toronto");
+//        System.out.println("Output : " + newString);
     }
 }

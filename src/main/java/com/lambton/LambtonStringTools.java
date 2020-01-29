@@ -5,17 +5,54 @@
  */
 package com.lambton;
 
+import java.util.ArrayList;
+
 /**
  *
  * @author Pritesh Patel
  */
 public class LambtonStringTools 
 {
+
+    public static String[] splitString(String s){
+        char[] charArray = s.toCharArray();
+        String[] reversed = new String[s.length()];
+        String valTillNow = "";
+        int position = 0;
+        int charCount = 0;
+        for(char ch:charArray){
+
+            if(ch == ' ' || charCount == charArray.length-1){
+                if(charCount == charArray.length-1){
+                    valTillNow +=ch;
+                }
+                reversed[position] = valTillNow;
+                valTillNow = "";
+                position ++;
+                charCount ++;
+                continue;
+            }
+            valTillNow = valTillNow + ch;
+            charCount ++;
+        }
+        return reversed;
+
+    }
     //1 - REVERSE STRING
     public static String reverse(String s)
     {
-
-        return null;
+        if(s == null){
+            return null;
+        }
+        String[] splitStringArray = splitString(s);
+        String reversedString = "";
+        for(int i= splitStringArray.length-1; i>=0;i--){
+            if(splitStringArray[i] == null){
+                continue;
+            }
+            reversedString = reversedString + " " + splitStringArray[i];
+        }
+        return reversedString;
     }
     
     //2 - FORMAT INITIALS OF STRING
