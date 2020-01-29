@@ -99,7 +99,10 @@ public class LambtonStringTools
     //3 - FIND MOST FREQUENT CHARACTER FROM STRING
     public static String mostFrequent(String s) 
     {
-        return null;
+        if(s == null){
+            return null;
+        }
+        return s;
     }
     
     //4 - CONVERT BINARY NUMBER TO DECIMALS
