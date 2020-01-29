@@ -35,7 +35,21 @@ public class LambtonStringTools
             valTillNow = valTillNow + ch;
             charCount ++;
         }
-        return reversed;
+
+        int notNullCount = 0;
+        for(String ch:reversed){
+            if(ch != null){
+                notNullCount++;
+            }
+        }
+        String[] reversedArray = new String[notNullCount];
+        int indexCounter = 0;
+        for(String st:reversed){
+            if(st != null){
+                reversedArray[indexCounter++] = st;
+            }
+        }
+        return reversedArray;
 
     }
     //1 - REVERSE STRING
@@ -47,9 +61,6 @@ public class LambtonStringTools
         String[] splitStringArray = splitString(s);
         String reversedString = "";
         for(int i= splitStringArray.length-1; i>=0;i--){
-            if(splitStringArray[i] == null){
-                continue;
-            }
             reversedString = reversedString + " " + splitStringArray[i];
         }
         return reversedString;
