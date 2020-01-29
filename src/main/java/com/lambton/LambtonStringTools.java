@@ -70,7 +70,30 @@ public class LambtonStringTools
     public static String initials(String s) 
     {
 
-        return null;
+        if(s == null){
+            return null;
+        }
+        String[] splitStringArray = splitString(s);
+        if(splitStringArray.length != 3){
+            return null;
+        }
+        String initialsName = "";
+        int counter = 1;
+        for(String word: splitStringArray){
+
+            if(counter!=3){
+                initialsName += word.toUpperCase().charAt(0) + ". ";
+            }
+            else {
+                String lowerCase = word.toLowerCase();
+                String UpperCase = word.toUpperCase();
+                initialsName += (UpperCase.charAt(0) + lowerCase.substring(1));
+            }
+
+            counter++;
+        }
+        return initialsName;
+
     }
         
     //3 - FIND MOST FREQUENT CHARACTER FROM STRING
