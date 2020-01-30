@@ -110,7 +110,20 @@ public class LambtonStringTools
     //4 - CONVERT BINARY NUMBER TO DECIMALS
     public static int binaryToDecimal(String s) 
     {
-       return 0;
+       if(s == null){
+           return 0;
+       }
+       char[] binaryCharArray = s.toCharArray();
+       int exponent = 0;
+       int sum =0;
+       for(int i=binaryCharArray.length-1;i>=0;i--){
+           int val =  Integer.valueOf(binaryCharArray[i]) -48;
+           sum += (val * Math.pow(2,exponent));
+           exponent ++;
+       }
+       return sum;
+
+
     }
 
 
