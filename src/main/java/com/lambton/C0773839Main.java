@@ -60,7 +60,7 @@ public class C0773839Main {
 
         String mostFrequent3 = LambtonStringTools.mostFrequent("aaaabbbb");
         System.out.println("Input  : aaaabbbb");
-        System.out.println("Output : " + mostFrequent2);
+        System.out.println("Output : " + mostFrequent3);
 
 
 
