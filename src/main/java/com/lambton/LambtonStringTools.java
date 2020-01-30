@@ -162,12 +162,6 @@ public class LambtonStringTools
 
 
 
-
-
-
-
-
-
     }
     
     //4 - CONVERT BINARY NUMBER TO DECIMALS
