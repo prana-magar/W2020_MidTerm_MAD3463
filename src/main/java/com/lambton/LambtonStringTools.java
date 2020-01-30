@@ -7,7 +7,7 @@ package com.lambton;
 
 import sun.font.TrueTypeFont;
 
-import java.util.ArrayList;
+import java.util.*;
 
 /**
  *
@@ -104,7 +104,69 @@ public class LambtonStringTools
         if(s == null){
             return null;
         }
-        return s;
+
+        HashMap<Character,Integer> mapper = new HashMap<>();
+        HashMap<Character,Integer> indexMapper = new HashMap<>();
+        char[] charArray = s.toCharArray();
+        int index =0;
+        for(char ch : charArray){
+            if(ch == ' '){
+                continue;
+            }
+            if(mapper.containsKey(ch)){
+                mapper.put(ch,mapper.get(ch) +1);
+            }
+            else{
+                mapper.put(ch,1);
+            }
+
+            indexMapper.put(ch,index);
+            index++;
+        }
+
+
+        int max_value = -1;
+
+        for(Map.Entry<Character,Integer> en : mapper.entrySet()){
+            int value = en.getValue();
+            if(value >= max_value){
+                max_value =  value;
+            }
+        }
+
+        ArrayList<Character> ch_array = new ArrayList<>();
+        for(Map.Entry<Character,Integer> en : mapper.entrySet()){
+            int value = en.getValue();
+            if(value == max_value){
+                ch_array.add(en.getKey());
+            }
+        }
+
+        if(ch_array.size() == 1){
+            return ch_array.get(0).toString();
+        }
+        else{
+            int max_index = 0;
+            Character curr_max_char = ch_array.get(0);
+            for(Character ch: ch_array){
+                int value = indexMapper.get(ch);
+                if(value >= max_index){
+                    curr_max_char = ch;
+                }
+            }
+
+            return curr_max_char.toString();
+        }
+
+
+
+
+
+
+
+
+
+
     }
     
     //4 - CONVERT BINARY NUMBER TO DECIMALS
