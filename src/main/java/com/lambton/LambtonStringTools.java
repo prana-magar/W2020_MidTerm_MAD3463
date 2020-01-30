@@ -5,6 +5,8 @@
  */
 package com.lambton;
 
+import sun.font.TrueTypeFont;
+
 import java.util.ArrayList;
 
 /**
@@ -110,10 +112,43 @@ public class LambtonStringTools
     {
        return 0;
     }
-     
+
+
+
+    public static Boolean isSubstring(char[] originalArray, char[] replaceArray,int startIndex){
+
+        for(int i=startIndex,j=0;i<=originalArray.length-1 && j<= replaceArray.length-1 ; i++,j++){
+            if(originalArray[i] != replaceArray[j]){
+                return Boolean.FALSE;
+            }
+        }
+        return Boolean.TRUE;
+    }
     //5 - REPLACING SUBSTRING WITH NEW STRING IN EXISTING STRING
     public static String replaceSubString(String originalString, String findString, String newString) 
     {
-        return null;
+        if (originalString ==null || findString ==null || newString ==null){
+            return null;
+        }
+
+        char[] originalCharArray = originalString.toCharArray();
+        char[] findCharArray = findString.toCharArray();
+        char[] newCharArray = newString.toCharArray();
+
+        String replaceString = "";
+
+        for(int i=0; i<= originalCharArray.length-1; ){
+            if(isSubstring(originalCharArray,findCharArray,i)){
+                replaceString += new String(newCharArray);
+                i += findCharArray.length;
+            }
+            else{
+                replaceString+= originalCharArray[i];
+                i++;
+            }
+        }
+
+        return replaceString;
+
     }
 }
