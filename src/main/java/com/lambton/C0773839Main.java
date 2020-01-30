@@ -58,6 +58,11 @@ public class C0773839Main {
         System.out.println("Input  : aaaabb");
         System.out.println("Output : " + mostFrequent2);
 
+        String mostFrequent3 = LambtonStringTools.mostFrequent("aaaabbbb");
+        System.out.println("Input  : aaaabbbb");
+        System.out.println("Output : " + mostFrequent2);
+
+
 
 
         System.out.println("\n--- Replace SubString");
