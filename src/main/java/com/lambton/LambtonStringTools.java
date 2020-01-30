@@ -16,6 +16,7 @@ import java.util.*;
 public class LambtonStringTools 
 {
 
+    // splits the string with space
     public static String[] splitString(String s){
         char[] charArray = s.toCharArray();
         String[] reversed = new String[s.length()];
